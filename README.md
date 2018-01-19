@@ -10,7 +10,7 @@ This application will allow zoo employees to input and track data about animals 
 
 ## Future Development
 
-Given the time I would allow users to be able to search by typing potential attributes in part or whole to get a list of animals that match.
+Given the time I would allow users to be able to view animals in the list by typing potential attributes in part or whole to get a list of animals that match.
 
 ## Setup
 

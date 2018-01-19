@@ -12,7 +12,8 @@ import { Animal } from './animal.model';
       </select>
     </div>
     <div class="animal-list-output">
-      <div *ngFor='let thisAnimal of childAnimalList | ageFilter:ageRangeToDisplay'>
+      <span>Click any animal to edit!</span>
+      <div *ngFor='let thisAnimal of childAnimalList | ageFilter:ageRangeToDisplay' (click)='editThisAnimalClick(thisAnimal)'>
         <h4>{{thisAnimal.name}}</h4>
         <span>Species: {{thisAnimal.species}}</span>
         <span>Age: {{thisAnimal.age}}</span>
@@ -22,7 +23,6 @@ import { Animal } from './animal.model';
         <span>Disikes: {{thisAnimal.dislikes}}</span>
         <span>This animal is located at: {{thisAnimal.location}}.</span>
         <span>This animal needs {{thisAnimal.caretakersNeeded}} caretakers.</span>
-        <button (click)='editThisAnimalClick(thisAnimal)'>Edit This Animal!</button>
       </div>
     </div>
   `

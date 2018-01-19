@@ -69,7 +69,10 @@ new-animal, animal-edit {
   justify-content: space-around;
 }
 
+
+
 .animal-list-output div, .animal-list-output ul, .edit-animal, .new-animal {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
