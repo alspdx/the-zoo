@@ -5,13 +5,15 @@ import { Animal } from './animal.model'
   selector: 'app-root',
   template: `
     <h1>The Zoo</h1>
-    <div class='animal-container'>
-      <button (click)='openAddNewAnimalForm()'>Add a new animal!</button>
-      <animal-list [childAnimalList]='masterAnimalList' (animalToEditSender)='editThisAnimal($event)'></animal-list>
-    </div>
-    <div class='edit-container'>
-      <animal-edit [childSelectedAnimal]='selectedAnimal' (doneEditingSender)='doneEditingAnimal()'></animal-edit>
-      <new-animal [childAddNewAnimal]='addNewAnimal' (newAnimalSender)='newAnimalProfile($event)' (doneAddingSender)=doneAddingNewAnimal()></new-animal>
+    <div class='wrapper'>
+      <div class='animal-container'>
+        <button (click)='openAddNewAnimalForm()'>Add a new animal!</button>
+        <animal-list [childAnimalList]='masterAnimalList' (animalToEditSender)='editThisAnimal($event)'></animal-list>
+      </div>
+      <div class='edit-container'>
+        <animal-edit [childSelectedAnimal]='selectedAnimal' (doneEditingSender)='doneEditingAnimal()'></animal-edit>
+        <new-animal [childAddNewAnimal]='addNewAnimal' (newAnimalSender)='newAnimalProfile($event)' (doneAddingSender)=doneAddingNewAnimal()></new-animal>
+      </div>
     </div>
   `
 })

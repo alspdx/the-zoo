@@ -2,6 +2,20 @@ body {
   background-color: honeydew;
 }
 
+.wrapper {
+  display: flex;
+}
+
+.animal-container {
+  flex-basis: 50%;
+  padding: 20px;
+}
+
+.edit-container {
+  flex-basis: 50%;
+  padding: 20px;
+}
+
 .animal-list-output div, .animal-list-output ul, .edit-animal, .new-animal {
   display: flex;
   flex-direction: column;

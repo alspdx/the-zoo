@@ -5,7 +5,7 @@ import { Animal } from './animal.model'
   selector: 'animal-list',
   template: `
     <div class="animal-list-output">
-      <div *ngFor='let thisAnimal of childAnimalList'>
+      <div *ngFor='let thisAnimal of childAnimalList | ageFilter:ageRangeToDisplay'>
         <h4>{{thisAnimal.name}}</h4>
         <span>Species: {{thisAnimal.species}}</span>
         <span>Age: {{thisAnimal.age}}</span>
@@ -24,6 +24,8 @@ import { Animal } from './animal.model'
 export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
   @Output() animalToEditSender = new EventEmitter();
+
+  ageRangeToDisplay: string = 'all';
 
   editThisAnimalClick(animalToSend) {
     this.animalToEditSender.emit(animalToSend);
