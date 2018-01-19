@@ -10,20 +10,19 @@ This application will allow zoo employees to input and track data about animals 
 
 ## Future Development
 
-Given the time I would allow users to be able to view animals in the list by typing potential attributes in part or whole to get a list of animals that match.
+Given the time I would allow users to be able to view animals in the list by typing potential attributes in part or whole to get a list of animals that match. I would also add cleaner styling with a proper Sass file structure.
 
 ## Setup
 
   1. Open Terminal or Command Line.
   2. Change directories to where you would like to clone the files.
   3. Run
-  `$ git clone https://github.com/alspdx/zoo.git`.
+  `$ git clone https://github.com/alspdx/the-zoo.git`.
   4. Change directories to the 'zoo' directory.
   5. Run the following in the command line:
   ```
   $ npm install
   $ bower install
-  $ gulp build
   $ gulp serve
   ```
 
