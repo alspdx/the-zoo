@@ -32,6 +32,7 @@ export class AppComponent {
 
   editThisAnimal(animalToEdit) {
     this.selectedAnimal = animalToEdit;
+    this.addNewAnimal = false;
   }
 
   doneEditingAnimal() {
@@ -44,6 +45,7 @@ export class AppComponent {
 
   openAddNewAnimalForm() {
     this.addNewAnimal = true;
+    this.selectedAnimal = null;
   }
 
   newAnimalProfile(animalToAdd) {

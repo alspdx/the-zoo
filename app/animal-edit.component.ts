@@ -13,8 +13,8 @@ import { Animal } from './animal.model';
       <span>Diet: <input [(ngModel)]='childSelectedAnimal.diet'></span>
       <span>Likes: <input [(ngModel)]='childSelectedAnimal.likes'></span>
       <span>Dislikes: <input [(ngModel)]='childSelectedAnimal.dislikes'></span>
-      <span>This animal is located at: <input [(ngModel)]='childSelectedAnimal.location'>.</span>
-      <span>This animal needs <input type='number' [(ngModel)]='childSelectedAnimal.caretakersNeeded'> caretakers.</span>
+      <span>This animal is located at: <input [(ngModel)]='childSelectedAnimal.location'></span>
+      <span>Caretakers needed: <input type='number' [(ngModel)]='childSelectedAnimal.caretakersNeeded'></span>
       <button (click)='doneEditingClick()'>I'm done editing this animal!</button>
     </div>
   `
