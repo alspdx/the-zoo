@@ -6,11 +6,12 @@ import { Animal } from './animal.model'
   template: `
     <h1>The Zoo</h1>
     <div class='animal-container'>
+      <button (click)='openAddNewAnimalForm()'>Add a new animal!</button>
       <animal-list [childAnimalList]='masterAnimalList' (animalToEditSender)='editThisAnimal($event)'></animal-list>
     </div>
     <div class='edit-container'>
       <animal-edit [childSelectedAnimal]='selectedAnimal' (doneEditingSender)='doneEditingAnimal()'></animal-edit>
-      <new-animal (newAnimalSender)='newAnimalProfile($event)'></new-animal>
+      <new-animal [childAddNewAnimal]='addNewAnimal' (newAnimalSender)='newAnimalProfile($event)' (doneAddingSender)=doneAddingNewAnimal()></new-animal>
     </div>
   `
 })
@@ -25,6 +26,7 @@ export class AppComponent {
   ];
 
   selectedAnimal = null;
+  addNewAnimal = false;
 
   editThisAnimal(animalToEdit) {
     this.selectedAnimal = animalToEdit;
@@ -32,6 +34,14 @@ export class AppComponent {
 
   doneEditingAnimal() {
     this.selectedAnimal = null;
+  }
+
+  doneAddingNewAnimal() {
+    this.addNewAnimal = false;
+  }
+
+  openAddNewAnimalForm() {
+    this.addNewAnimal = true;
   }
 
   newAnimalProfile(animalToAdd) {
