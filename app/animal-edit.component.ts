@@ -6,15 +6,15 @@ import { Animal } from './animal.model';
   template: `
     <div class="edit-animal" *ngIf='childSelectedAnimal'>
       <h4>Edit Animal</h4>
-      <h4>{{childSelectedAnimal.name}}</h4>
-      <span>Species: {{childSelectedAnimal.species}}</span>
-      <span>Age: {{childSelectedAnimal.age}}</span>
-      <span>Gender: {{childSelectedAnimal.gender}}</span>
-      <span>Diet: {{childSelectedAnimal.diet}}</span>
-      <span>Likes: {{childSelectedAnimal.likes}}</span>
-      <span>Dislikes: {{childSelectedAnimal.dislikes}}</span>
-      <span>This animal is located at: {{childSelectedAnimal.location}}.</span>
-      <span>This animal needs {{childSelectedAnimal.caretakersNeeded}} caretakers.</span>
+      <h4>Name: <input [(ngModel)]='childSelectedAnimal.name'></h4>
+      <span>Species: <input [(ngModel)]='childSelectedAnimal.species'></span>
+      <span>Age: <input [(ngModel)]='childSelectedAnimal.age'></span>
+      <span>Gender: <input [(ngModel)]='childSelectedAnimal.gender'></span>
+      <span>Diet: <input [(ngModel)]='childSelectedAnimal.diet'></span>
+      <span>Likes: <input [(ngModel)]='childSelectedAnimal.likes'></span>
+      <span>Dislikes: <input [(ngModel)]='childSelectedAnimal.dislikes'></span>
+      <span>This animal is located at: <input [(ngModel)]='childSelectedAnimal.location'>.</span>
+      <span>This animal needs <input [(ngModel)]='childSelectedAnimal.caretakersNeeded'> caretakers.</span>
       <button (click)='doneEditingClick()'>I'm done editing this animal!</button>
     </div>
   `
@@ -27,5 +27,4 @@ export class AnimalEditComponent {
   doneEditingClick() {
     this.doneEditingSender.emit()
   }
-
 }
