@@ -11,14 +11,8 @@ import { Animal } from './animal.model'
         <span>Age: {{thisAnimal.age}}</span>
         <span>Gender: {{thisAnimal.gender}}</span>
         <span>Diet: {{thisAnimal.diet}}</span>
-        <span>Likes:</span>
-        <ul>
-          <span *ngFor='let thisLike of thisAnimal.likes'>{{thisLike}}</span>
-        </ul>
-        <span>Dislikes:</span>
-        <ul>
-          <span *ngFor='let thisDislike of thisAnimal.dislikes'>{{thisDislike}}</span>
-        </ul>
+        <span>Likes: {{thisAnimal.likes}}</span>
+        <span>Disikes: {{thisAnimal.dislikes}}</span>
         <span>This animal is located at: {{thisAnimal.location}}.</span>
         <span>This animal needs {{thisAnimal.caretakersNeeded}} caretakers.</span>
         <button (click)='editThisAnimalClick(thisAnimal)'>Edit This Animal!</button>
@@ -31,7 +25,7 @@ export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
   @Output() animalToEditSender = new EventEmitter();
 
-  editThisAnimal(animalToEdit) {
-    this.animalToEditSender.emit(animalToEdit);
+  editThisAnimalClick(animalToSend) {
+    this.animalToEditSender.emit(animalToSend);
   }
 }
