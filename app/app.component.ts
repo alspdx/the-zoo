@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Animal } from './animal.model'
+import { Animal } from './animal.model';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,7 @@ import { Animal } from './animal.model'
     <h1>The Zoo</h1>
     <div class='wrapper'>
       <div class='animal-container'>
-        <button (click)='openAddNewAnimalForm()'>Add a new animal!</button>
+        <button class='add-new-animal-button' (click)='openAddNewAnimalForm()'>Add a new animal!</button>
         <animal-list [childAnimalList]='masterAnimalList' (animalToEditSender)='editThisAnimal($event)'></animal-list>
       </div>
       <div class='edit-container'>
@@ -24,7 +24,8 @@ export class AppComponent {
     new Animal('Candy', 'Polar Bear', 7, 'Female', 'Carnivore', 'Playing in the snow', 'Global Warming', 'Ice Caves', 6),
     new Animal('Prince Edward', 'Lion', 22, 'Male', 'Carnivore', 'The thrill of the hunt', 'Not being respected at the watering hole', 'The Safari Room', 9),
     new Animal('Dudley', 'Elephant', 48, 'Male', 'Herbivore', 'Stamping around in the mud', 'Circus freaks and mice', 'The Safari Room', 3),
-    new Animal('Christina', 'Flamingo', 18, 'Female', 'Omnivore', 'Wading around, eating shrimp, the color pink', 'Open relationships and Standing on two legs', 'Shallow Shores', 1),
+    new Animal('Christina', 'Flamingo', 2, 'Female', 'Omnivore', 'Wading around, eating shrimp, the color pink', 'Open relationships and Standing on two legs', 'Shallow Shores', 1),
+    new Animal('Mittens', 'Lion', 1, 'Female', 'Carnivore', 'Playing', 'Being picked up', 'The Safari Room', 2),
   ];
 
   selectedAnimal = null;

@@ -1,9 +1,16 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Animal } from './animal.model'
+import { Animal } from './animal.model';
 
 @Component ({
   selector: 'animal-list',
   template: `
+    <div class="pipe-selector">
+      <select (change)="changeAgeRangeToDisplay($event.target.value)">
+        <option value="all">Show All Animals</option>
+        <option value="underTwo">Show Animals under 2 years old</option>
+        <option value="mature">Show Animals over 2 years old</option>
+      </select>
+    </div>
     <div class="animal-list-output">
       <div *ngFor='let thisAnimal of childAnimalList | ageFilter:ageRangeToDisplay'>
         <h4>{{thisAnimal.name}}</h4>
@@ -29,5 +36,9 @@ export class AnimalListComponent {
 
   editThisAnimalClick(animalToSend) {
     this.animalToEditSender.emit(animalToSend);
+  }
+
+  changeAgeRangeToDisplay(ageRange) {
+    this.ageRangeToDisplay = ageRange;
   }
 }
