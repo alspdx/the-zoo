@@ -10,6 +10,7 @@ import { Animal } from './animal.model'
     </div>
     <div class='edit-container'>
       <animal-edit [childSelectedAnimal]='selectedAnimal' (doneEditingSender)='doneEditingAnimal()'></animal-edit>
+      <new-animal></new-animal>
     </div>
   `
 })

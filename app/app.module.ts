@@ -4,10 +4,11 @@ import { AppComponent }   from './app.component';
 import { FormsModule }   from '@angular/forms';
 import { AnimalListComponent } from './animal-list.component';
 import { AnimalEditComponent } from './animal-edit.component';
+import { NewAnimalComponent } from './new-animal.component';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, AnimalListComponent, AnimalEditComponent ],
+  declarations: [ AppComponent, AnimalListComponent, AnimalEditComponent, NewAnimalComponent ],
   bootstrap:    [ AppComponent ]
 })
 
