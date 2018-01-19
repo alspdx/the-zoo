@@ -2,11 +2,7 @@ body {
   background-color: honeydew;
 }
 
-.caffeine {
-  color: red;
-}
-
-#new-keg-input {
+.animal-list-output div, .animal-list-output ul {
   display: flex;
   flex-direction: column;
 }

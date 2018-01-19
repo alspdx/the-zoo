@@ -6,7 +6,7 @@ import { Animal } from './animal.model'
   template: `
     <h1>The Zoo</h1>
     <div>
-
+      <animal-list [childAnimalList]='masterAnimalList'></animal-list>
     </div>
   `
 })
