@@ -8,8 +8,6 @@
 
 This application will allow zoo employees to input and track data about animals in the zoo. The user will be able to add a name, species, age, gender, diet, likes and dislikes, location in the zoo, and how many caretakers needed. The user will be able to see and edit a list of animals and the data about those animals. The user will be able to filter the list by age groups.
 
-
-
 ## Future Development
 
 Given the time I would allow users to be able to search by typing potential attributes in part or whole to get a list of animals that match.
