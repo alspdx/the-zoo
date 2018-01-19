@@ -9,7 +9,7 @@ import { Animal } from './animal.model'
       <animal-list [childAnimalList]='masterAnimalList' (animalToEditSender)='editThisAnimal($event)'></animal-list>
     </div>
     <div class='edit-container'>
-      <animal-edit [childSelectedAnimal]='selectedAnimal'></animal-edit>
+      <animal-edit [childSelectedAnimal]='selectedAnimal' (doneEditingSender)='doneEditingAnimal()'></animal-edit>
     </div>
   `
 })
@@ -27,6 +27,10 @@ export class AppComponent {
 
   editThisAnimal(animalToEdit) {
     this.selectedAnimal = animalToEdit;
+  }
+
+  doneEditingAnimal() {
+    this.selectedAnimal = null;
   }
 
 }
