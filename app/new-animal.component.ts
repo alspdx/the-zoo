@@ -4,22 +4,33 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'new-animal',
   template: `
-    <div class="new-animal" *ngIf='childAddNewAnimal'>
-      <h4>Add New Animal</h4>
-      <span>Name: <input #name></span>
-      <span>Species: <input #species></span>
-      <span>Age: <input type='number' #age></span>
-      <span>Gender: <input #gender></span>
-      <span>Diet: <input #diet></span>
-      <span>Likes: <input #likes></span>
-      <span>Dislikes: <input #dislikes></span>
-      <span>This animal is located at: <input #location></span>
-      <span>Caretakers needed: <input type='number' #caretakersNeeded></span>
-      <div class='buttons-div'>
+    <div class="new-animal" *ngIf="childAddNewAnimal">
+      <div class="form-header">
+        <h4>Add New Animal</h4>
+        <div class="exit-button" (click)='doneAddingClick();'>X</div>
+      </div>
+      <label>Name: </label>
+      <input #name>
+      <label>Species: </label>
+      <input #species>
+      <label>Age: </label>
+      <input type="number" #age>
+      <label>Gender: </label>
+      <input #gender>
+      <label>Diet: </label>
+      <input #diet>
+      <label>Likes: </label>
+      <input #likes>
+      <label>Dislikes: </label>
+      <input #dislikes>
+      <label>This animal is located at: </label>
+      <input #location>
+      <label>Caretakers needed: </label>
+      <input type="number" #caretakersNeeded>
+      <div class="buttons-div">
         <button (click)='newAnimalClick(name.value, species.value, age.value, gender.value, diet.value, likes.value, dislikes.value, location.value, caretakersNeeded.value);
                                         name.value=""; species.value=""; age.value=""; gender.value=""; diet.value=""; likes.value=""; dislikes.value=""; location.value=""; caretakersNeeded.value="";
                                         '>Submit new animal profile!</button>
-        <button (click)='doneAddingClick();'>I'm done adding new animals!</button>
       </div>
     </div>
   `

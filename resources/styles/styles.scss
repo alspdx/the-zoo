@@ -9,6 +9,9 @@ body {
 .animal-container {
   flex-basis: 50%;
   padding: 20px;
+  button {
+    width: 300px;
+  }
 }
 
 .edit-container {
@@ -19,19 +22,41 @@ body {
 }
 
 new-animal, animal-edit {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
-  div {
-    width: 100%;
+  .edit-animal, .new-animal {
+    width: 80%;
     display: flex;
-    align-items: center;
-    span {
+    flex-direction: column;
+    .form-header {
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      width: 100%;
-      margin: 10px 0;
     }
+    label {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+    }
+    input {
+      width: 100%;
+      margin: 0 0 10px 0;
+    }
+  }
+}
+
+.exit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  height: 24px;
+  width: 30px;
+  background: linear-gradient(to bottom, #ddd, #fff);
+  border: 1px solid #aaa;
+  &:hover {
+    cursor: pointer;
   }
 }
 
