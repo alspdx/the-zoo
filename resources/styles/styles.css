@@ -2,7 +2,7 @@ body {
   background-color: honeydew;
 }
 
-.animal-list-output div, .animal-list-output ul, .edit-animal {
+.animal-list-output div, .animal-list-output ul, .edit-animal, .new-animal {
   display: flex;
   flex-direction: column;
 }

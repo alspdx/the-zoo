@@ -10,7 +10,7 @@ import { Animal } from './animal.model'
     </div>
     <div class='edit-container'>
       <animal-edit [childSelectedAnimal]='selectedAnimal' (doneEditingSender)='doneEditingAnimal()'></animal-edit>
-      <new-animal></new-animal>
+      <new-animal (newAnimalSender)='newAnimalProfile($event)'></new-animal>
     </div>
   `
 })
@@ -22,7 +22,7 @@ export class AppComponent {
     new Animal('Prince Edward', 'Lion', 22, 'Male', 'Carnivore', 'The thrill of the hunt', 'Not being respected at the watering hole', 'The Safari Room', 9),
     new Animal('Dudley', 'Elephant', 48, 'Male', 'Herbivore', 'Stamping around in the mud', 'Circus freaks and mice', 'The Safari Room', 3),
     new Animal('Christina', 'Flamingo', 18, 'Female', 'Omnivore', 'Wading around, eating shrimp, the color pink', 'Open relationships and Standing on two legs', 'Shallow Shores', 1),
-  ]
+  ];
 
   selectedAnimal = null;
 
@@ -34,4 +34,7 @@ export class AppComponent {
     this.selectedAnimal = null;
   }
 
+  newAnimalProfile(animalToAdd) {
+    this.masterAnimalList.push(animalToAdd);
+  }
 }
