@@ -18,7 +18,7 @@ Given the time I would allow users to be able to view animals in the list by typ
   2. Change directories to where you would like to clone the files.
   3. Run
   `$ git clone https://github.com/alspdx/the-zoo.git`.
-  4. Change directories to the 'zoo' directory.
+  4. Change directories to the 'the-zoo' directory.
   5. Run the following in the command line:
   ```
   $ npm install

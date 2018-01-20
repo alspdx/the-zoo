@@ -2,11 +2,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Animal } from './animal.model';
 
 @Pipe({
-  name: 'ageFilter',
+  name: 'ageRangeFilter',
   pure: false
 })
 
-export class AgeFilterPipe implements PipeTransform {
+export class AgeRangeFilterPipe implements PipeTransform {
   transform(input: Animal[], filterAgeRange) {
     let output: Animal[] = [];
     if (filterAgeRange === 'underTwo') {

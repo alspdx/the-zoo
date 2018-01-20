@@ -4,35 +4,35 @@ import { Animal } from './animal.model';
 @Component ({
   selector: 'animal-edit',
   template: `
-    <div class="edit-animal" *ngIf='childSelectedAnimal'>
+    <div class="edit-animal" *ngIf='childSelectedAnimalToEdit'>
       <div class="form-header">
         <h4>Edit Animal</h4>
         <div class="exit-button" (click)='doneEditingClick();'>X</div>
       </div>
       <label>Name: </label>
-      <input [(ngModel)]='childSelectedAnimal.name'>
+      <input [(ngModel)]='childSelectedAnimalToEdit.name'>
       <label>Species: </label>
-      <input [(ngModel)]='childSelectedAnimal.species'>
+      <input [(ngModel)]='childSelectedAnimalToEdit.species'>
       <label>Age: </label>
-      <input type='number' [(ngModel)]='childSelectedAnimal.age'>
+      <input type='number' [(ngModel)]='childSelectedAnimalToEdit.age'>
       <label>Gender: </label>
-      <input [(ngModel)]='childSelectedAnimal.gender'>
+      <input [(ngModel)]='childSelectedAnimalToEdit.gender'>
       <label>Diet: </label>
-      <input [(ngModel)]='childSelectedAnimal.diet'>
+      <input [(ngModel)]='childSelectedAnimalToEdit.diet'>
       <label>Likes: </label>
-      <input [(ngModel)]='childSelectedAnimal.likes'>
+      <input [(ngModel)]='childSelectedAnimalToEdit.likes'>
       <label>Dislikes: </label>
-      <input [(ngModel)]='childSelectedAnimal.dislikes'>
+      <input [(ngModel)]='childSelectedAnimalToEdit.dislikes'>
       <label>This animal is located at: </label>
-      <input [(ngModel)]='childSelectedAnimal.location'>
+      <input [(ngModel)]='childSelectedAnimalToEdit.location'>
       <label>Caretakers needed: </label>
-      <input type='number' [(ngModel)]='childSelectedAnimal.caretakersNeeded'>
+      <input type='number' [(ngModel)]='childSelectedAnimalToEdit.caretakersNeeded'>
     </div>
   `
 })
 
 export class AnimalEditComponent {
-  @Input() childSelectedAnimal: Animal;
+  @Input() childSelectedAnimalToEdit: Animal;
   @Output() doneEditingSender = new EventEmitter();
 
   doneEditingClick() {

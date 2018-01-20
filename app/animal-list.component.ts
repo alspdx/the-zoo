@@ -7,13 +7,13 @@ import { Animal } from './animal.model';
     <div class="pipe-selector">
       <select (change)="changeAgeRangeToDisplay($event.target.value)">
         <option value="all">Show All Animals</option>
-        <option value="underTwo">Show Animals under 2 years old</option>
+        <option value="underTwo">Show Animals 2 years old or under</option>
         <option value="mature">Show Animals over 2 years old</option>
       </select>
     </div>
     <div class="animal-list-output">
       <span>Click any animal to edit!</span>
-      <div *ngFor='let thisAnimal of childAnimalList | ageFilter:ageRangeToDisplay' (click)='editThisAnimalClick(thisAnimal)'>
+      <div *ngFor='let thisAnimal of childAnimalList | ageRangeFilter:ageRangeToDisplay' (click)='editThisAnimalClick(thisAnimal)'>
         <h4>{{thisAnimal.name}}</h4>
         <span>Species: {{thisAnimal.species}}</span>
         <span>Age: {{thisAnimal.age}}</span>
